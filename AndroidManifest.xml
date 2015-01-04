@@ -2836,21 +2836,6 @@
             </intent-filter>
         </activity>
 
-       	<!-- ************************************* -->
-        <!--      TODO frankswu :     butter-knife SAMPLES             -->
-        <!-- ************************************* -->
-        
-	    <activity
-	        android:label="@string/butter_knife_app_name"
-	        android:name="com.example.butterknife.SimpleActivity">
-	      <intent-filter>
-	        <action android:name="android.intent.action.MAIN"/>
-	        <category android:name="android.intent.category.SAMPLE_CODE" />
-	        </intent-filter>
-	    </activity>   
-	    
-	    
-    
 
        	<!-- ************************************* -->
         <!--      TODO frankswu :     InjectView Activity And Adapter Demo		-->
