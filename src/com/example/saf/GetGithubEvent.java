@@ -2,7 +2,7 @@ package com.example.saf;
 
 import java.util.List;
 
-import com.example.saf.RestClientListDemo.Contributor;
+import com.example.saf.domain.Contributor;
 
 
 

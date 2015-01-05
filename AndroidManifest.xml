@@ -44,7 +44,7 @@
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
 
-    <application android:name="ApiDemosApplication"
+    <application android:name="com.example.saf.ApiDemosApp"
             android:label="@string/activity_sample_code"
             android:icon="@drawable/app_sample_code"
             android:hardwareAccelerated="true"
@@ -2862,8 +2862,9 @@
 		</activity>	    
 
        	<!-- ************************************* -->
-        <!--      TODO frankswu :     RestClient Demo		-->
+        <!--      TODO frankswu :SAF/RestClient and Sqlite ORM Demo-->
         <!-- ************************************* -->
+	    	    	    	    		
 	    	    		
 	    <activity
                 android:label="@string/saf_demo_app_name_3"
@@ -2874,8 +2875,13 @@
             </intent-filter>
 		</activity>	    	    
 
+		<!-- 		db的model所在的包路径 ,db名称，db 版本-->
+	    <meta-data android:name="DOMAIN_PACKAGE" android:value="com.example.saf.domain"/>	    
+	    <meta-data android:name="DB_NAME" android:value="android.api.demo.db"/>	    
+   	    <meta-data android:name="DB_VERSION" android:value="1"/>	    
+	    	    
        	<!-- ************************************* -->
-        <!--      TODO frankswu :     InectExtra Demo		-->
+        <!--      TODO frankswu :     InectExtra and Route Demo		-->
         <!-- ************************************* -->
 	    	    
 	    <activity

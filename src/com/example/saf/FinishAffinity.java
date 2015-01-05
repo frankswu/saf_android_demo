@@ -18,6 +18,7 @@ package com.example.saf;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import cn.salesuite.saf.inject.Injector;
 import cn.salesuite.saf.inject.annotation.InjectExtra;
+import cn.salesuite.saf.route.Router;
 
 import com.example.android.apis.R;
 
@@ -33,11 +35,12 @@ public class FinishAffinity extends Activity {
 	
 	@InjectExtra(key="nesting")
     int mNesting;
+	private Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        mContext = this;
         setContentView(R.layout.saf_activity_finish_affinity);
         Injector.injectInto(this);
         // TODO 通过使用@InjectExtra 注解key，简化Activity之间的参数传递
@@ -53,9 +56,13 @@ public class FinishAffinity extends Activity {
 
     private OnClickListener mNestListener = new OnClickListener() {
         public void onClick(View v) {
-            Intent intent = new Intent(FinishAffinity.this, FinishAffinity.class);
-            intent.putExtra("nesting", mNesting+1);
-            startActivity(intent);
+//            Intent intent = new Intent(FinishAffinity.this, FinishAffinity.class);
+//            intent.putExtra("nesting", mNesting+1);
+        	Bundle extra = new Bundle();
+        	extra.putInt("nesting", mNesting+1);
+    		// 实际route跳转使用
+            Router.getInstance().open("FinishAffinity/nesting", mContext, extra);
+//            startActivity(intent);
         }
     };
 
