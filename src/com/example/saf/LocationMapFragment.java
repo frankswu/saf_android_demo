@@ -70,6 +70,11 @@ public class LocationMapFragment extends Fragment {
 	@Subscribe
 	public void onLocationChanged(LocationChangedEvent event) {
 		// Stop existing download, if it exists.
+		// 图片加载imageLoader使用
+		String url = "http://restapi.amap.com/v3/staticmap?scale=2&location=116.37359,39.92437&zoom=10&size=216*140&markers=mid,,A:116.37359,39.92437&key=ee95e52bf08006f63fd29bcfbcf21df0";
+//		ApiDemosApp.getInstance().imageLoader.displayImage(String.format(URL, event.lat, event.lon), imageView, null);
+		ApiDemosApp.getInstance().imageLoader.displayImage(url, imageView, null);
+		/**
 		if (downloadTask != null) {
 			downloadTask.cancel(true);
 		}
@@ -77,6 +82,7 @@ public class LocationMapFragment extends Fragment {
 		// Trigger a background download of an image for the new location.
 		downloadTask = new DownloadTask();
 		downloadTask.execute(String.format(URL, event.lat, event.lon));
+		**/
 	}
 
 	@Subscribe

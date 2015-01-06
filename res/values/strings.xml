@@ -1457,7 +1457,7 @@
     <!--  TODO frankswu : SAF Demo examples strings  -->
     <!-- ============================ -->
   	<string name="saf_demo_app_name_1">Demo - SAF/InjectView Activity And Adapter Demo</string>
-  	<string name="saf_demo_app_name_2">Demo - SAF/EventBus Demo</string>
+  	<string name="saf_demo_app_name_2">Demo - SAF/EventBus and Image Cache Demo</string>
   	<string name="saf_demo_app_name_3">Demo - SAF/RestClient and Sqlite ORM Demo</string>
   	<string name="saf_demo_app_name_4">Demo - SAF/InectExtra and Route Demo</string>
   	<string name="saf_demo_app_name_5">Demo - SAF/RestClient Demo</string>
